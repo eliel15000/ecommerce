@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <p className="logo">
-        <Link href="/">ECoding Headphones</Link>
+        <Link href="/">EzCoding Headphones</Link>
       </p>
 
       <button type="button" className="cart-icon" onClick="">

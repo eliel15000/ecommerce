@@ -5,12 +5,14 @@ import { client, urlFor } from "../../lib/client";
 import { Product } from "../../components";
 
 const ProductDetails = ({ products, product }) => {
-  const { image, name, details, price } = product;
+  const { image, name, details, price, slug } = product;
   const [index, setIndex] = useState(0);
 
-  // useEffect(() => {
-  //   setIndex(0);
-  // }, [name]);
+  console.log(product);
+
+  useEffect(() => {
+    setIndex(0);
+  }, [slug]);
 
   return (
     <div>
