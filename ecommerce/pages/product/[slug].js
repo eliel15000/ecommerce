@@ -8,12 +8,13 @@ import { useStateContext } from "../../context/StateContext";
 const ProductDetails = ({ products, product }) => {
   const { image, name, details, price, slug } = product;
   const [index, setIndex] = useState(0);
-  const { decQty, incQty, qty, onAdd } = useStateContext();
+  const { decQty, incQty, qty, setQty, onAdd } = useStateContext();
 
   // console.log(product);
 
   useEffect(() => {
     setIndex(0);
+    setQty(1);
   }, [slug]);
 
   return (

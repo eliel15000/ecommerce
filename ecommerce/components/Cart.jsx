@@ -9,7 +9,7 @@ import { urlFor } from "../lib/client";
 
 const Cart = () => {
   const cartRef = useRef();
-  const { totalPrice, totalQuantities, cartItems, setShowCart } = useStateContext();
+  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
 
   return (
     <div className="cart-wrapper" ref={{cartRef}}>
@@ -47,16 +47,17 @@ const Cart = () => {
               <div className="item-desc">
                 <div className="flex top">
                   <h5>{item.name}</h5>
+                  {console.log(item.name)}
                   <h4>${item.price}</h4>
                 </div>
                 <div className="flex bottom">
                   <div>
                   <p className="quantity-desc">
-                    <span className="minus" onClick="">
+                    <span className="minus" onClick={() => toggleCartItemQuantity(item._id, "dec")}>
                       <AiOutlineMinus />
                     </span>
-                    <span className="num" onClick="">0</span>
-                    <span className="plus" onClick="">
+                    <span className="num" onClick="">{item.quantity}</span>
+                    <span className="plus" onClick={() => toggleCartItemQuantity(item._id, "inc")}>
                       <AiOutlinePlus />
                     </span>
                   </p>
@@ -64,7 +65,7 @@ const Cart = () => {
                   <button
                     type="button"
                     className="remove-item"
-                    onClick=""
+                    onClick={() => onRemove(item)}
                   >
                     <TiDeleteOutline />
                   </button>
@@ -86,7 +87,7 @@ const Cart = () => {
                 className="btn"
                 onClick=""
               >
-                Pay With Strpe
+                Pay With Stripe
               </button>
             </div>
           </div>
