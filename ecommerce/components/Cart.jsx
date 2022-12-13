@@ -8,11 +8,12 @@ import { useStateContext } from "../context/StateContext";
 import { urlFor } from "../lib/client";
 
 const Cart = () => {
-  const cartRef = useRef();
+  // const cartRef = useRef();
   const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
 
   return (
-    <div className="cart-wrapper" ref={{cartRef}}>
+    // <div className="cart-wrapper" ref={{cartRef}}>
+    <div className="cart-wrapper">
       <div className="cart-container">
         <button 
           type="button"
@@ -47,7 +48,6 @@ const Cart = () => {
               <div className="item-desc">
                 <div className="flex top">
                   <h5>{item.name}</h5>
-                  {console.log(item.name)}
                   <h4>${item.price}</h4>
                 </div>
                 <div className="flex bottom">
