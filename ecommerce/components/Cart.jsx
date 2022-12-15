@@ -9,7 +9,7 @@ import { urlFor } from "../lib/client";
 import getStripe from "../lib/getStripe";
 
 const Cart = () => {
-  const cartRef = useRef();
+  // const cartRef = useRef();
   const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
 
   const handleCheckout = async () => {
@@ -33,8 +33,8 @@ const Cart = () => {
   }
 
   return (
-    <div className="cart-wrapper" ref={{cartRef}}>
-    {/* <div className="cart-wrapper"> */}
+    // <div className="cart-wrapper" ref={{cartRef}}>
+    <div className="cart-wrapper">
       <div className="cart-container">
         <button 
           type="button"
@@ -77,7 +77,7 @@ const Cart = () => {
                     <span className="minus" onClick={() => toggleCartItemQuantity(item._id, "dec")}>
                       <AiOutlineMinus />
                     </span>
-                    <span className="num" onClick="">{item.quantity}</span>
+                    <span className="num">{item.quantity}</span>
                     <span className="plus" onClick={() => toggleCartItemQuantity(item._id, "inc")}>
                       <AiOutlinePlus />
                     </span>
