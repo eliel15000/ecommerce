@@ -25,6 +25,7 @@ width: 100%;
 
 .layout {
   padding: 10px;
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 
 .navbar-container {
@@ -270,6 +271,8 @@ span.text-red {
   left: 8%; */
   top: -25%;
   left: 25%;
+  width: 550px;
+  height: 550px;
 }
 
 .banner-desc .right {

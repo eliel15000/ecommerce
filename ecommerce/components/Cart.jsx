@@ -26,6 +26,7 @@ const Cart = () => {
     if (response.statusCode === 500) return;
 
     const data = await response.json();
+    console.log(data);
 
     toast.loading("Redirecting...");
 
