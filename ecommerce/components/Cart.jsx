@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Link from "next/link";
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
@@ -9,7 +9,6 @@ import { urlFor } from "../lib/client";
 import getStripe from "../lib/getStripe";
 
 const Cart = () => {
-  // const cartRef = useRef();
   const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
 
   const handleCheckout = async () => {
@@ -26,7 +25,6 @@ const Cart = () => {
     if (response.statusCode === 500) return;
 
     const data = await response.json();
-    console.log(data);
 
     toast.loading("Redirecting...");
 
@@ -34,7 +32,6 @@ const Cart = () => {
   }
 
   return (
-    // <div className="cart-wrapper" ref={{cartRef}}>
     <div className="cart-wrapper">
       <div className="cart-container">
         <button 
