@@ -162,6 +162,7 @@ span.text-red {
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+  position: absolute;
   z-index:10000 !important;
 }
 
@@ -286,6 +287,11 @@ span.text-red {
 
 .banner-desc .right p {
   font-size: 18px;
+}
+
+.banner-desc .right button {
+  position: absolute;
+  z-index: 100;
 }
 
 .banner-desc .right .company-desc {
@@ -700,10 +706,16 @@ span.text-red {
     /* top: -2%; */
     right: 10%;
   }
+  .footer-banner-container {
+    height: 580px;
+    margin-top: 80px;
+  }
   .footer-banner-image {
-    width: 32%;
-    height: 300px;
-
+    top: 50%;
+    /* right: 50%; */
+    width: 72%;
+    height: 56%;
+    left: 12%;
   }
 }
 
@@ -723,16 +735,19 @@ span.text-red {
     top: 10%;
     right: 10%;
   }
-  .footer-banner-container {
+  /* .footer-banner-container {
     height: 560px;
     margin-top: 80px;
-  }
-  .footer-banner-image {
+  } */
+  /* .footer-banner-image {
     width: 77%;
     left: 32%;
     top: 4%;
     height: 56%
-  }
+  } */
+  /* .footer-banner-image {
+    top: 30%;
+  } */
   .banner-desc .left h3 {
     font-weight: 900;
     font-size: 40px;
@@ -852,6 +867,9 @@ span.text-red {
 }
 
 @media screen and (max-width:600px) {
+  .hero-banner-container {
+    height: 615px;
+  }
   .hero-banner-image {
     width: 290px;
     height: 290px;
@@ -859,9 +877,15 @@ span.text-red {
     right: 10%;
   }
   .hero-banner-container button {
-    margin-top: 180px;
+    margin-top: 212px;
   }
-  /* .hero-banner-container .desc {
-    margin-top: 650px;
-  } */
+}
+
+@media screen and (max-width:567px) {
+  .footer-banner-image {
+    width: 77%;
+    left: 32%;
+    top: 4%;
+    height: 56%
+  }
 }
